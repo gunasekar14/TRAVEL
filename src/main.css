@@ -103,7 +103,8 @@ video {
   height: auto;
 
 }
-.logoDiv{
+
+.logoDiv {
   width: 20%;
   height: 20%;
 
@@ -305,4 +306,137 @@ h2 {
   position: absolute;
   width: 100%;
 
+}
+
+.search {
+  .sectionContainer {
+    width: 100%;
+    padding: 1.5rem;
+    border: 2px solid var(--grayBg);
+    border-radius: 16px;
+    row-gap: 2rem; /* This should be applied to a flex container */
+    display: flex; /* Added to ensure flex properties work */
+    flex-direction: column; /* This should be added to ensure correct layout */
+  }
+
+  .btns {
+    background: var(--SecondaryColor);
+    padding: .5rem; /* Changed from -5rem to 5rem, padding cannot be negative */
+    border-radius: 1rem;
+    display: flex; /* Added to ensure flex properties work */
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+
+    .singleBtn{
+      padding: 0.8rem 1.5rem;
+      font-size: 13px;
+      border-radius: 3rem;
+      width: 80%;
+      text-align: center;
+
+      &:hover{
+        background-color: var(--PrimaryColor);
+        color: var(--whiteColor);
+        font-weight: 500;
+        transition: .4s ease;
+      }
+    }
+    .active{
+      background-color: var(--PrimaryColor);
+      color: var(--whiteColor);
+      font-weight: 500;
+    }
+  }
+
+  .SearchInputs{
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+     .singleInput{
+      .iconDiv{
+        padding: 16px 10px;
+        border-radius: 3rem;
+        background: var(--SecondaryColor);
+        margin-right: 1rem;
+
+        .icon{
+          color: var(--blackColor);
+          opacity: .7;
+        }
+      }
+
+      .texts{
+        h4{
+          padding-top: 0;
+          padding-bottom: .7rem;
+          color: var(--blackColor);
+          font-weight: 700;
+        }
+
+        input{
+          width: 95%;
+          border: none;
+          outline: none;
+          background: transparent;
+
+          &::placeholder{
+            font: size 12px; 
+            opacity: .5;
+          }
+        }
+      }
+     }
+  }
+}
+
+.support{
+  .sectionContainer{
+    .titlesDiv{
+      text-align: center;
+      small{
+        letter-spacing: .8rem;
+        text-decoration: uppercase;
+        font-size: 13px;
+        color: var(--blackColor);
+        line-height: 1.5rem;
+      }
+    }
+
+    .infoDiv{
+      margin-top: 2rem;
+      gap: 1.5rem;
+
+      .textDiv{
+        .number{
+          background: var(--PrimaryColor);
+          padding:5px 12px ;
+          width: 40px;
+          border-radius: 3rem;
+          text-align: center;
+          font-size: 13px;
+          font-weight: 700;
+          color: var(--whiteColor);
+
+        }
+        .colorOne{
+          background: var(--colorOne);
+        }
+        .colorTwo{
+          background: var(--colorTwo);
+        }
+      }
+    }
+
+    .imgDiv{
+      margin: auto;
+      img{
+        width: 100%;
+        max-width: 420px;
+        border-radius: 80px;
+      }
+    }
+  }
 }
